@@ -1,0 +1,97 @@
+[
+    {
+    "language": "English",
+    "msg": "Welcome, Select a category",
+    "data": [
+        {
+            "title": "Cat 1",
+            "questions": [
+                {"q1":"a1"},
+                {"q2":"a2"}
+            ]
+        },
+        {
+            "title": "Cat 2",
+            "questions": [
+                {"q1":"a1"},
+                {"q2":"a2"}
+        ]
+        },
+        {
+            "title": "Cat 3",
+            "questions": [
+                {"q1":"a1"},
+                {"q2":"a2"}
+        ]
+        }
+    ]
+    }
+,
+{
+    "language": "Español",
+    "msg": "Bienvenido, Selecciona una categoría",
+    "data": [
+        {
+            "title": "Preguntas Institucionales",
+            "questions": [
+                {"¿Quién o quiénes manejan el turismo en El Salvador?":"MITUR, CORSATUR e ISTU."},
+                {"¿Qué es MITUR?":"Es el Ministerio de Turismo, organismo rector en materia turística."},
+                {"¿Cuál es la función del Ministerio de Turismo?":"Determina y vela por el cumplimiento de la política y del plan nacional de Turismo."},
+                {"¿Qué es CORSATUR?":"Es la Corporación Salvadoreña de Turismo."},{"¿Cuál es la función de CORSATUR?":"Su finalidad principal es la promoción de los sitios más atractivos del país fomentando la inversión extranjera y nacional."},
+                {"¿Qué es ISTU?":"Es el instituto Salvadoreño de Turismo."},{"¿Cuál es la unción del Instituto Salvadoreño de Turismo?":"Su finalidad es la administración de los Centros Recreativos de su propiedad. También tendrá a su cargo la promoción y estímulo de la recreación familiar, social y excursionismo, en lo que se refiere a la atracción de visitantes hacia dichos centros."},{"¿Cuáles son los Centros Recreativos que administra el ISTU?":"Parque Acuático Apulo, parque Balboa, Parque Puerta del Diablo, Parque Walter Thilo Deininger, Parque Acuático Los Chorros, Parque acuático Toma de Quezaltepeque, Parque nacional Cerro verde, Parque acuático Sihuatehuacán, Parque acuático Atecozol, Parque acuático Amapulapa, Parque acuático Laguna de Apastepeque, parque acuático Altos de Las Cueva, Parque acuático Costa del Sol, Parque acuático Ichanmichen, Parque acuático Agua fría."},
+                {"¿Qué significa RNT?":"Registro Nacional de Turismo. Es un registro público administrado por CORSATUR, donde se inscriben Empresas Turísticas nacionales y/o internacionales."}
+               
+            ]
+        },
+        {
+            "title": "Centros de atención al turísta",
+            "questions": [
+                {"¿Qué es CAT?":"Los Centros de Atención Turística (CAT), son oficinas de CORSATUR que tienen la función de brindar asistencia técnica, atención e información para el fomento de la actividad turística a nivel nacional, tienen a su cargo la conformación y seguimiento de los CDT. Los CAT son el enlace de la institución con actores claves como empresarios del sector turismo, gobiernos locales, asociaciones, CDT, turista nacionales e internacionales, entre otros."},
+                {"¿Cuántos CAT hay en el país?":"Son 6 Centros de Atención Turística (CAT) a nivel nacional."},
+                {"¿Cuál es el horario de atención de los Centros de Atención Turística (CAT)?":"El horario es de 09:00 a.m. a 05:00 p.m., de lunes a domingo."}
+        ]
+        },
+        {
+            "title": "Rutas Turísticas",
+            "questions": [
+                {"¿Qué municipios forman parte de la Ruta de Las Flores?":"Ahuachapán, Apaneca, Concepción de Ataco, Juayúa, Salcoatitán, Nahuizalco"},
+                {"¿Cuáles son los atractivos más emblemáticos de la Ruta de Las Flores?":"Laguna Verde de Apaneca, Chorros de la Calera de Juayúa, Los Ausoles de Ahuachapán, museo Nahuat-Pipil Nahuizalco, Plaza gastronómica en Salcoatitán, Mirador de la Cruz en Concepción de Ataco, entre otros."}
+        ]
+        },
+        {
+            "title": "Playas",
+            "questions": [
+                {"q1":"a1"},
+                {"q2":"a2"}
+        ]
+        }
+    ]
+    },
+    {
+        "language": "Français",
+        "msg": "Bienvenue, Choisir une catégorie",
+        "data": [
+            {
+                "title": "catégorie 1",
+                "questions": [
+                    {"q1":"a1"},
+                    {"q2":"a2"}
+                ]
+            },
+            {
+                "title": "catégorie 2",
+                "questions": [
+                    {"q1":"a1"},
+                    {"q2":"a2"}
+            ]
+            },
+            {
+                "title": "catégorie 3",
+                "questions": [
+                    {"q1":"a1"},
+                    {"q2":"a2"}
+            ]
+            }
+        ]
+        }
+]
