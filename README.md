@@ -1,5 +1,2 @@
-## Simple and clear React App with normalize and bootstrap 4
+## Chat to wordpress site
 
-Just copy the repository and install it
-
-carloscruz85@gmail.com
