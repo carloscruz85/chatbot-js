@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "normalize.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "normalize.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./views/home";
 import * as serviceWorker from "./serviceWorker";
 
@@ -9,7 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById("cc85-chatbox-container")
 );
 
 // If you want your app to work offline and load faster, you can change

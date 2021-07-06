@@ -9,28 +9,29 @@
   
 }
 
-.cusuco{
-  width: 200px;
-  height: auto;
-}
-
 .rsc-os-options{
-  display: flex !important;
-  flex-direction: column !important;
+  // display: flex !important;
+  // flex-direction: column !important;
 }
 
-.rsc-os-option-element{
-  background-color: #b38cde !important;
-  color: white !important;
+.rsc-os-option-element, .rsc-ts-bubble{
+  background-color: #303845 !important;
+  color: #dedede !important;
   // display: inline-block !important;
   text-align: left !important;
+}
+
+.rsc-ts-user{
+  .rsc-ts-bubble{
+    background-color: #6b7384 !important;
+  }
 }
 
 .rsc-ts-bubble{
   width: 90% !important;
 }
 .my-chat-header{
-  background-color: #b38cde;
+  background-color: #3c4457;
   // height: 100px;
   padding: 1rem;
   img.my-chat-mail-image{
@@ -43,13 +44,12 @@
   background-color: #dddddd !important;
   width: 80%;
   overflow: hidden;
- 
 }
 
 .answer{
   background-color: #dddddd;
   width: 100%;
-  color: #345ac6;
+  color: #303845;
   padding: 1rem;
   li{
     margin: 1rem 0;
@@ -70,4 +70,10 @@ button.rsc-os-option-element{
 .rsc-ts-bubble{
   max-width: 100% !important;
  
+}
+
+.rsc-float-button{
+  background-color: #3c4457 !important;
+  border: white 1px solid;
+  
 }
