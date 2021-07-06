@@ -9,14 +9,9 @@
   
 }
 
-.cusuco{
-  width: 200px;
-  height: auto;
-}
-
 .rsc-os-options{
-  display: flex !important;
-  flex-direction: column !important;
+  // display: flex !important;
+  // flex-direction: column !important;
 }
 
 .rsc-os-option-element, .rsc-ts-bubble{
@@ -28,7 +23,7 @@
 
 .rsc-ts-user{
   .rsc-ts-bubble{
-    background-color: #3c4457 !important;
+    background-color: #6b7384 !important;
   }
 }
 
@@ -49,7 +44,6 @@
   background-color: #dddddd !important;
   width: 80%;
   overflow: hidden;
- 
 }
 
 .answer{
@@ -81,4 +75,5 @@ button.rsc-os-option-element{
 .rsc-float-button{
   background-color: #3c4457 !important;
   border: white 1px solid;
+  
 }

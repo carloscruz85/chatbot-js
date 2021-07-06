@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "./wp-content/plugins/cc85-chatbox/chat/",
   "name": "ChatBox",
   "version": "0.1.0",
   "private": true,

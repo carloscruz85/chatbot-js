@@ -4,30 +4,68 @@ import { ThemeProvider } from 'styled-components'
 import ChatBot from 'react-simple-chatbot'
 import MyHeader from '../../parts/myHeader'
 import Theme from '../../config/theme'
-
-
+import Chat from '../../assets/media/chat.png'
+import Bot from '../../assets/media/bot.png'
+import User from '../../assets/media/user.png'
 import axios from 'axios'
 
 const App = () => {
   const [show, setShow] = useState(false)
   const [questions, setQuestions] = useState([])
-  const chatIcon = 'www.'+window.location.hostname+'/wp-content/plugins/cc85-chatbox/img/chat.png'
-  const Bot = 'www.'+window.location.hostname+'/wp-content/plugins/cc85-chatbox/img/bot.png'
-  const User ='www.'+window.location.hostname+'/wp-content/plugins/cc85-chatbox/img/user.png'
-
+  const [images, setImages] = useState( {chat: '', bot: '', user:''} )
   useEffect(() => {
-    // console.log('www.'+window.location.hostname+'/wp-content/plugins/cc85-chatbox/img/chat.png');
+  
+
+    const getUrl = window.location;
+    let baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+    baseUrl = document.location.origin
+    baseUrl = 'http://localhost/carloscruz85/'
+    // console.log(baseUrl);
+    
+    setImages( 
+      {
+        chat: baseUrl+'/wp-content/plugins/cc85-chatbox/img/chat.png',
+        bot: baseUrl+'/wp-content/plugins/cc85-chatbox/img/bot.png',
+        user: baseUrl+'/wp-content/plugins/cc85-chatbox/img/user.png',
+      }
+     )
+
+    // console.log('check ', baseUrl+'/wp-json/ccruz85/v2/questions');
+
     axios
-    .get('http://localhost/carloscruz85/wp-json/ccruz85/v2/questions')
+    .get(baseUrl+'/wp-json/ccruz85/v2/questions')
       .then(function (response) {
         // console.log(response.data);
+        response.data[1].options.push(
+          {
+            value: 5,
+            label: 'Cerrar Chat',
+            trigger: () => {
+              close()
+              return '2'
+            },
+          }
+        )
+
+        response.data[response.data.length - 1].options.push( 
+          {
+            value: 5,
+            label: 'Cerrar Chat',
+            trigger: () => {
+              close()
+              return '2'
+            },
+          }
+         )
+        // console.log(response.data[response.data.length - 1].options);
+        
+
         setQuestions(response.data)
       })
       .catch(function (error) {
         console.log(error)
       })
   }, []);
-
 
 
   const close = () => {
@@ -47,13 +85,13 @@ const App = () => {
           steps={questions}
           botDelay="500"
           headerComponent={<MyHeader />}
-          botAvatar={Bot}
-          userAvatar={User}
+          botAvatar={images.bot}
+          userAvatar={images.user}
           opened={show}
           //hideSubmitButton={true}
           toggleFloating={toggleFloating}
           floating={true}
-          floatingIcon={chatIcon}
+          floatingIcon={images.chat}
         /> : null
         }
   
