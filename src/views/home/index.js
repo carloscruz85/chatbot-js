@@ -82,10 +82,36 @@ const App = () => {
         
 
         setQuestions(data)
+
+   
+
       })
       .catch(function (error) {
         console.log(error)
       })
+
+      //getting images from api
+      console.log('getting images');
+      axios
+      .get(baseUrl+'/wp-json/ccruz85/v2/cc85chatbot')
+        .then(function (response) {
+
+          if( response.data !== false ){
+            console.log(response.data);
+              setImages(
+                {
+                  bot: response.data.machine_avatar,
+                  user: response.data.user_chat_bot,
+                  chat: response.data.chat_bot_image
+                }
+              )
+          }
+  
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+
   }, []);
 
 
