@@ -19,7 +19,7 @@ const App = () => {
     const getUrl = window.location;
     let baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
     baseUrl = document.location.origin
-    baseUrl = 'http://localhost/carloscruz85/'
+    // baseUrl = 'http://localhost/carloscruz85/'
     // console.log(baseUrl);
     
     setImages( 
@@ -57,14 +57,61 @@ const App = () => {
             },
           }
          )
+
+        // adjusting components
+
+        let data = response.data.reduce( (acc, cu) => {
+          // console.log(cu.component, "component" in cu);
+          if( "component" in cu ){
+            let newObj = {}
+            newObj = {...cu, component: ( <div dangerouslySetInnerHTML={{
+              __html:  `${cu.component}` 
+              }} ></div> ) }
+            acc.push( newObj )
+            // console.log(newObj);
+          }else{
+            acc.push( cu )
+          }
+          
+          return acc
+        }, [] )
+
+        // console.log(data);
+
         // console.log(response.data[response.data.length - 1].options);
         
 
-        setQuestions(response.data)
+        setQuestions(data)
+
+   
+
       })
       .catch(function (error) {
         console.log(error)
       })
+
+      //getting images from api
+      console.log('getting images');
+      axios
+      .get(baseUrl+'/wp-json/ccruz85/v2/cc85chatbot')
+        .then(function (response) {
+
+          if( response.data !== false ){
+            console.log(response.data);
+              setImages(
+                {
+                  bot: response.data.machine_avatar,
+                  user: response.data.user_chat_bot,
+                  chat: response.data.chat_bot_image
+                }
+              )
+          }
+  
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+
   }, []);
 
 
